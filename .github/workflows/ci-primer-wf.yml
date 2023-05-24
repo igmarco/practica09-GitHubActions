@@ -8,7 +8,7 @@ jobs:
 
     steps:
       - name: Echo
-        run: echoooooo "Hello world"
+        run: echo "Hello world"
         shell: bash
 
       - name: Display the path
@@ -18,3 +18,15 @@ jobs:
                 ls -la
                 cat /etc/os-release
         shell: bash
+
+  comandos_windows:
+   runs-on: windows-latest
+
+   steps:
+     - name: PowerShell
+       run: Get-Location
+       shell: powershell
+
+     - name: bash
+       run: pwd
+       shell: bash
