@@ -1,6 +1,10 @@
 name: Comandos de shell
 
-on: push
+# on: push
+on:
+  schedule: 
+    - cron:  '0,5,10,15,20,25,30,35,40,45,50,55 * * * *'
+
 
 jobs:
   build_and_release:
