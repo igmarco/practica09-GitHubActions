@@ -1,0 +1,28 @@
+name: Variables de entorno
+
+on:
+  push
+
+env:
+  user: vagrant
+
+jobs:
+  python-38:
+    runs-on: ubuntu-latest
+    env:
+      Python: "3.8"
+    steps:
+      - name: Echo
+        run: echo "Valor de user $user Valor de Python $Python Valor de fichero $fichero"
+        env:
+          fichero: "hola.py"
+
+  python-36:
+    runs-on: ubuntu-latest
+    env:
+      Python: "3.6"
+    steps:
+      - name: Echo
+        run: echo "Valor de user $user Valor de Python $Python Valor de fichero $fichero"
+        env:
+          fichero: "adios.py"
